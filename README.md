@@ -1,2 +1,2 @@
 # mulligans-lane
-Test bench project
+Test bench for the Strengthening Our Community project
