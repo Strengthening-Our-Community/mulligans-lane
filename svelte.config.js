@@ -5,8 +5,8 @@ const config = {
 	kit: {
 		adapter: adapter({
 			// default options are shown
-			pages: 'build/_app/pages',
-			assets: 'build/_app/assets/_app/assets',
+			pages: 'build',
+			assets: 'build',
 			fallback: null
 		}),
 		// Comment the paths if wants to run in dev mode.
