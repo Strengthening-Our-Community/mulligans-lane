@@ -8,10 +8,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		// Comment the paths if wants to run in dev mode.
-		// paths: {
-		// 	base: '/mulligans-lane',
-		// 	assets: '/mulligans-lane'
-		// },
+		paths: {
+			base: '/mulligans-lane',
+			assets: '/mulligans-lane'
+		},
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
