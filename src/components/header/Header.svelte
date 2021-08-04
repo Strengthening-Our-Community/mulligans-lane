@@ -8,7 +8,7 @@
 <header>
 	<div class="corner">
 		<a
-			aria-label="Burrell Creek Youth and Community Association Inc. profile photo"
+			aria-label="Alan Keown profile photo"
 			href="https://www.facebook.com/Burrell-Creek-Youth-and-Community-Association-Inc-1584955455117833/?__tn__=-UC*F"
 		>
 			<img
