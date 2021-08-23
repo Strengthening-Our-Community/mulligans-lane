@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+import WindiCSS from 'vite-plugin-windicss';
 import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -13,11 +14,12 @@ const config = {
 					$stores: resolve('./src/stores'),
 					$actions: resolve('./src/actions')
 				}
-			}
+			},
+			plugins: [WindiCSS.default()]
 		},
 		paths: {
-			base: '/mulligans-lane',
-			assets: '/mulligans-lane'
+			// base: '/mulligans-lane',
+			// assets: '/mulligans-lane'
 		},
 		adapter: adapter({
 			pages: 'build',

@@ -1,5 +1,6 @@
 <script>
 	import Header from '$components/header/Header.svelte';
+	import "virtual:windi.css"
 	import '../app.css';
 </script>
 
