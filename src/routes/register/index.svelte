@@ -10,14 +10,14 @@
 	let email = '';
 	let mobile = '';
 	let phone = '';
-	let username = '';
+	let displayname = '';
 	let password = '';
 	let errors = null;
 
 	async function signUp() {
 		const { user, error } = await supabase.auth.signUp({
-			email: 'example@email.com',
-			password: 'example-password'
+			email: email,
+			password: password
 		});
 		console.log(user);
 		console.log(error);
@@ -38,6 +38,16 @@
 	<form on:submit|preventDefault={signUp}>
 		<fieldset class="form-group">
 			<legend>Please provide the following information:</legend>
+			<label for="displayname">Display name:</label>
+			<input
+				class="form-control"
+				type="text"
+				required
+				id="displayname"
+				name="displayname"
+				placeholder="User name"
+				bind:value={displayname}
+			/><br />
 			<label for="fullname">Full name:</label>
 			<input
 				class="form-control"
