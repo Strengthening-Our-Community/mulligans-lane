@@ -4,7 +4,7 @@
 </script>
 
 <nav>
-	<svg width="2.3em" height="3.8em"  viewBox="0 0.55 2 3" aria-hidden="true">
+	<svg width="2.3em" height="3.8em" viewBox="0 0.55 2 3" aria-hidden="true">
 		<path d="m 0 0 l 1 2 c 0.5 1 0.5 1 1 1 l 0 -3 z" />
 	</svg>
 	<ul>
@@ -22,6 +22,13 @@
 				About
 			</a>
 		</li>
+		<li class="nav-item" class:active={$page.path.endsWith('/auth')}>
+			<a class="nav-link" sveltekit:prefetch href="{base}/auth">
+				<!-- <i class="ion-gear-a" /> -->
+				<!-- &nbsp;  -->
+				Auth
+			</a>
+		</li>
 		<li class="nav-item" class:active={$page.path.endsWith('/login')}>
 			<a class="nav-link" sveltekit:prefetch href="{base}/login">
 				<!-- <i class="ion-gear-a" /> -->
@@ -37,14 +44,14 @@
 			</a>
 		</li>
 	</ul>
-	<svg width="2.3em" height="3.8em"  viewBox="0 0.55 2 3" aria-hidden="true">
+	<svg width="2.3em" height="3.8em" viewBox="0 0.55 2 3" aria-hidden="true">
 		<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 	</svg>
 </nav>
 
 <style>
 	nav {
-        font-family: 'Segoe UI';
+		font-family: 'Segoe UI';
 		display: inline-flex;
 		--background: rgba(255, 255, 255, 0.7);
 	}
