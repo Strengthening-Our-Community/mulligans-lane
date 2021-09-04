@@ -5,7 +5,9 @@
 			// 	status: 302,
 			// 	redirect: '/'
 			// };
+			console.log(session);
 		}
+		console.log('No session');
 		return {};
 	}
 </script>
@@ -39,6 +41,7 @@
 				type="text"
 				class="block border border-orange-700 w-full p-3 rounded mb-4"
 				name="fullname"
+				required="required"
 				placeholder="Full Name"
 			/>
 
@@ -47,7 +50,9 @@
 				type="email"
 				class="block border border-orange-700 w-full p-3 rounded mb-4"
 				name="email"
+				required="required"
 				placeholder="Email"
+				autocomplete="email"
 			/>
 
 			<input
@@ -55,6 +60,7 @@
 				type="password"
 				class="block border border-orange-700 w-full p-3 rounded mb-4"
 				name="password"
+				required="required"
 				placeholder="Password"
 			/>
 			<input
@@ -62,12 +68,13 @@
 				type="password"
 				class="block border border-orange-700 w-full p-3 rounded mb-4"
 				name="confirm_password"
+				required="required"
 				placeholder="Confirm Password"
 			/>
 
 			<button
 				type="submit"
-				class="w-full text-center py-3 rounded bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1"
+				class="w-full text-center py-3 rounded-full bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1"
 				>Create Account</button
 			>
 		</form>
@@ -88,6 +95,6 @@
 
 	<div class="text-grey-dark mt-6">
 		Already have an account?
-		<a class="no-underline border-b border-blue text-blue" href="../login/"> Log in </a>.
+		<a class="no-underline border-b border-blue text-blue" href="../auth/login/"> Sign in </a>.
 	</div>
 </div>

@@ -22,22 +22,15 @@
 				About
 			</a>
 		</li>
-		<li class="nav-item" class:active={$page.path.endsWith('/auth')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/auth">
-				<!-- <i class="ion-gear-a" /> -->
-				<!-- &nbsp;  -->
-				Auth
-			</a>
-		</li>
 		<li class="nav-item" class:active={$page.path.endsWith('/login')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/login">
+			<a class="nav-link" sveltekit:prefetch href="{base}/auth/login">
 				<!-- <i class="ion-gear-a" /> -->
 				<!-- &nbsp;  -->
 				Sign In
 			</a>
 		</li>
 		<li class="nav-item" class:active={$page.path.endsWith('/register')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/register">
+			<a class="nav-link" sveltekit:prefetch href="{base}/auth/register">
 				<!-- <i class="ion-gear-a" /> -->
 				<!-- &nbsp; -->
 				Sign Up
