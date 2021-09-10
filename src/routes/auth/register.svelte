@@ -54,7 +54,6 @@
 				placeholder="Email"
 				autocomplete="email"
 			/>
-
 			<input
 				id="password"
 				type="password"

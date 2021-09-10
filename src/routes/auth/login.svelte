@@ -12,8 +12,8 @@
 
 <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
 	<div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+		<h1 class="mb-8 text-3xl text-center">Welcome Back</h1>
 		<form on:submit|preventDefault={signIn}>
-			<h1 class="mb-8 text-3xl text-center">Welcome Back</h1>
 			<input
 				id="email"
 				type="email"
