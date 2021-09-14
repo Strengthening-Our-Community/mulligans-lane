@@ -44,7 +44,32 @@
 				required="required"
 				placeholder="Full Name"
 			/>
-
+			<input
+				id="streetaddress"
+				type="text"
+				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				name="streetaddress"
+				required="required"
+				placeholder="Street Address"
+			/>
+			<div class="inline-block">
+				<input
+					id="suburb"
+					type="text"
+					class=" border max-w-1/2 border-orange-700 w-full p-3 rounded mb-4"
+					name="suburb"
+					required="required"
+					placeholder="Suburb"
+				/>
+				<input
+					id="postcode"
+					type="text"
+					class=" border max-w-1/3 border-orange-700 w-full p-3 rounded mb-4"
+					name="postcode"
+					required="required"
+					placeholder="Postcode"
+				/>
+			</div>
 			<input
 				id="email"
 				type="email"
