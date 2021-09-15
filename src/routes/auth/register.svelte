@@ -5,9 +5,8 @@
 			// 	status: 302,
 			// 	redirect: '/'
 			// };
-			console.log(session);
 		}
-		console.log('No session');
+		console.log(session);
 		return {};
 	}
 </script>
@@ -15,12 +14,15 @@
 <script>
 	import { goto } from '$app/navigation';
 	async function signUp(e) {
-		const response = await fetch('/auth/signup', {
+		const response = await fetch('/api/auth/register', {
 			method: 'post',
 			body: new FormData(e.target)
 		});
-		if (response.ok) window.location = '/';
-		else alert(await response.text());
+
+		if (response.ok) {
+			console.log(response);
+			window.location = '/';
+		} else alert(await response.text());
 	}
 	async function signIn(e) {
 		const response = await fetch('/auth/signin', {
@@ -34,7 +36,8 @@
 
 <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
 	<div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-		<form on:submit|preventDefault={signUp}>
+		<!-- <form on:submit|preventDefault={signUp}> -->
+		<form action="/api/auth/register" method="POST">
 			<h1 class="mb-8 text-3xl text-center">Sign up</h1>
 			<input
 				id="fullname"
@@ -43,6 +46,7 @@
 				name="fullname"
 				required="required"
 				placeholder="Full Name"
+				autocomplete="name"
 			/>
 			<input
 				id="streetaddress"
@@ -51,6 +55,7 @@
 				name="streetaddress"
 				required="required"
 				placeholder="Street Address"
+				autocomplete="address-line1"
 			/>
 			<div class="inline-block">
 				<input
@@ -60,6 +65,7 @@
 					name="suburb"
 					required="required"
 					placeholder="Suburb"
+					autocomplete="address-level2"
 				/>
 				<input
 					id="postcode"
@@ -68,8 +74,27 @@
 					name="postcode"
 					required="required"
 					placeholder="Postcode"
+					autocomplete="postal-code"
 				/>
 			</div>
+			<input
+				id="mobile"
+				type="tel"
+				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				name="mobile"
+				required="required"
+				placeholder="Mobile phone number"
+			/>
+			<!-- pattern="[0]{1}[1-9]{3} [0-9]{3} [0-9]{3}" -->
+			<input
+				id="username"
+				type="username"
+				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				name="username"
+				required="required"
+				placeholder="User Name"
+				autocomplete="username"
+			/>
 			<input
 				id="email"
 				type="email"
@@ -88,10 +113,10 @@
 				placeholder="Password"
 			/>
 			<input
-				id="confirm_password"
+				id="confirmpassword"
 				type="password"
 				class="block border border-orange-700 w-full p-3 rounded mb-4"
-				name="confirm_password"
+				name="confirmpassword"
 				required="required"
 				placeholder="Confirm Password"
 			/>
