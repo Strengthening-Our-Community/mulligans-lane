@@ -5,15 +5,44 @@
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>About</title>
+		
 
 		
 
+		<link rel="modulepreload" href="/_app/start-52fffc42.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-686b029b.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7a69a38b.js">
+		<link rel="modulepreload" href="/_app/pages/policies/termsofservice.svelte-e1c7f78e.js">
 		<link rel="stylesheet" href="/_app/assets/start-808c0b29.css">
 		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f3cd2f88.css">
-		<link rel="stylesheet" href="/_app/assets/pages/about/index.svelte-2a893059.css">
 
-		
+		<script type="module">
+			import { start } from "/_app/start-52fffc42.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-7a69a38b.js"),
+						import("/_app/pages/policies/termsofservice.svelte-e1c7f78e.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/policies/termsofservice",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div id="svelte">
@@ -22,7 +51,7 @@
 <header><nav class="bg-orange-300"><div class="flex justify-between mx-1 lg:mx-50"><a class="p-1 w-44px md:w-66px md:mx-4rem rounded-full" aria-label="Hall photo" href="https://www.facebook.com/Burrell-Creek-Youth-and-Community-Association-Inc-1584955455117833/?__tn__=-UC*F"><img class="rounded-full" src="/_app/assets/hall_logo_image-74e3ea7f.png" alt="BCYCA Inc"></a>
 		<div class="inline-flex ">
 			<div class="flex items-center space-x-3"><div class="hidden md:block"><a sveltekit:prefetch href="/" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Home</a>
-					<a sveltekit:prefetch href="/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf active">About</a>
+					<a sveltekit:prefetch href="/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">About</a>
 					<a sveltekit:prefetch href="/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
 
 		
@@ -35,23 +64,19 @@
 
 	
 	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">About</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/auth/login" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a></li>
 			<li class="py-8"><a sveltekit:prefetch href="/auth/register" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
 </nav></header>
 
-<main class="svelte-1ach67k">
+<main class="svelte-1ach67k"><h1>Terms of Service</h1>
+<h2>We want to give you the best service possible.</h2>
+<p>By using use our Services you are agreeing to all of the terms set out below.</p>
 
-<div class="content svelte-s73l2v"><h1>About this app</h1>
-
-	<h3>We have a project</h3>
-	<p>Our aim is to <br>
-		Prepare<br>
-		Connect<br>
-		Rebound
-	</p>
-</div></main>
+<p>Your use of our Services is also subject to our Cookie Policy and our Privacy Policy, which covers
+	how we collect, use, share, and store your personal information.
+</p></main>
 
 <footer class="svelte-1ach67k"><p class="svelte-1ach67k">Building a safer connected community</p>
 </footer>

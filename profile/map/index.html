@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		
+
+		
+
+		<link rel="modulepreload" href="/_app/start-52fffc42.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-686b029b.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7a69a38b.js">
+		<link rel="modulepreload" href="/_app/pages/profile/map.svelte-50d09fad.js">
+		<link rel="stylesheet" href="/_app/assets/start-808c0b29.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f3cd2f88.css">
+
+		<script type="module">
+			import { start } from "/_app/start-52fffc42.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-7a69a38b.js"),
+						import("/_app/pages/profile/map.svelte-50d09fad.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/profile/map",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header><nav class="bg-orange-300"><div class="flex justify-between mx-1 lg:mx-50"><a class="p-1 w-44px md:w-66px md:mx-4rem rounded-full" aria-label="Hall photo" href="https://www.facebook.com/Burrell-Creek-Youth-and-Community-Association-Inc-1584955455117833/?__tn__=-UC*F"><img class="rounded-full" src="/_app/assets/hall_logo_image-74e3ea7f.png" alt="BCYCA Inc"></a>
+		<div class="inline-flex ">
+			<div class="flex items-center space-x-3"><div class="hidden md:block"><a sveltekit:prefetch href="/" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Home</a>
+					<a sveltekit:prefetch href="/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">About</a>
+					<a sveltekit:prefetch href="/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
+
+		
+		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/auth/login" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a>
+			<a sveltekit:prefetch href="/auth/register" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></div>
+		<div class="self-center text-sm font-extrabold text-orange-500 md:hidden">Strengthening Our Community
+		</div>
+		
+		<div class="md:hidden flex items-center"><button class="outline-none mobile-menu-button"><svg class="w-6 h-6 text-orange-500 hover:text-green-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div>
+
+	
+	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/auth/login" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a></li>
+			<li class="py-8"><a sveltekit:prefetch href="/auth/register" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
+</nav></header>
+
+<main class="svelte-1ach67k"></main>
+
+<footer class="svelte-1ach67k"><p class="svelte-1ach67k">Building a safer connected community</p>
+</footer>
+
+
+
+			<script type="application/json" data-type="svelte-data" data-url="https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Land_Parcel_Property_Theme/MapServer/12/query?where=&text=&objectIds=&time=&geometry=16932000%2C-3776000%2C16962000%2C-3750500&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=1&returnExtentOnly=false&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=geojson">{"status":200,"statusText":"OK","headers":{"cache-control":"public, must-revalidate, max-age=0","connection":"close","content-length":"1623","content-type":"application/geo+json;charset=UTF-8","date":"Tue, 21 Sep 2021 20:52:33 GMT","server":"Microsoft-IIS/10.0, ","vary":"Origin","via":"1.1 7c6ae574c703216604ff9b283dd8b3b8.cloudfront.net (CloudFront)","x-amz-cf-id":"r3mmctN8hNkwkhs-ppmVkfNqZL18TloREFPxoC-WPyh2XE8jSQzOOQ==","x-amz-cf-pop":"SYD4-C1","x-aspnet-version":"4.0.30319","x-cache":"Miss from cloudfront","x-content-type-options":"nosniff","x-edge-origin-shield-skipped":"0","x-powered-by":"ASP.NET","x-xss-protection":"1; mode=block"},"body":"{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"id\":118515,\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[152.33162810626735,-31.982473761122794],[152.33001495771873,-31.982256779380531],[152.32929431684602,-31.986202274472188],[152.327182770626,-31.985819413783982],[152.32656661280396,-31.986893308302335],[152.32375502520347,-31.987783736287628],[152.32403499751362,-31.988259983057347],[152.3241260529966,-31.989455410576738],[152.32361793892244,-31.989945238073556],[152.32355709153671,-31.989984473912248],[152.32277331706578,-31.990489808833548],[152.3225219942758,-31.990941414421314],[152.32822449183917,-31.991722822433744],[152.32885519787726,-31.988548219662825],[152.3324639347403,-31.989041929151107],[152.33273936157508,-31.987592578971626],[152.33250946248182,-31.987565910898123],[152.33285469290573,-31.98579819682254],[152.33109751073027,-31.985549338841896],[152.33162810626735,-31.982473761122794]]]},\"properties\":{\"RID\":118515,\"createdate\":1135036800000,\"gurasid\":49597392,\"principaladdresssiteoid\":132003,\"propertytype\":1,\"valnetpropertystatus\":2,\"valnetpropertytype\":2,\"dissolveparcelcount\":1,\"valnetlotcount\":1,\"valnetworkflowid\":null,\"propid\":1778723,\"superlot\":\"N\",\"housenumber\":\"345\",\"address\":\"345 CAREYS ROAD HILLVILLE\",\"startdate\":1208518704000,\"enddate\":32503680000000,\"lastupdate\":1208518704944,\"msoid\":117778,\"centroidid\":null,\"shapeuuid\":\"123b5d7c-6ab5-3b61-bd79-ea2238eabc10\",\"changetype\":\"I\",\"processstate\":null,\"urbanity\":\"R\",\"principaladdresstype\":1,\"addressstringoid\":688377,\"shape_Length\":4465.8075630669682,\"shape_Area\":591173.84210536501}}],\"exceededTransferLimit\":true}"}</script>
+		</div>
+	</body>
+</html>
