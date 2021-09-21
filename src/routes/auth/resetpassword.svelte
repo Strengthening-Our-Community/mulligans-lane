@@ -1,5 +1,32 @@
 <script>
 	import supabase from '$lib/db';
+	import dotenv from 'dotenv';
+	dotenv.config();
+
+	export async function surveyResult({ fetch }) {
+		let survey;
+		const key = process.env['GOOGLE_API_KEY'];
+		const id = process.env['SPREADSHEET_ID'];
+		const ranges = 'Sheet1';
+		const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}?fields=properties.title,sheets.properties.title&key=${key}`;
+		// const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values:batchGet?${ranges}&key=${key}`;
+		console.log(key);
+		console.log(url);
+
+		try {
+			survey = await fetch(url);
+			survey = await survey.json();
+			console.log(survey);
+		} catch (e) {
+			console.log(e);
+		}
+		// you can pass the `articles` via props like that
+		return {
+			props: {
+				survey
+			}
+		};
+	}
 
 	async function resetPassword() {
 		const { user, error } = await supabase.auth.signIn({

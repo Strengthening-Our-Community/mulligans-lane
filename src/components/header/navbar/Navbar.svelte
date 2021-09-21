@@ -1,114 +1,136 @@
 <script>
+	import Logo from '$components/header/logo/Logo.svelte';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
+
+	let menuOpen = true;
+
+	const handleNav = () => {
+		menuOpen = !menuOpen;
+	};
 </script>
 
-<nav>
-	<svg width="2.3em" height="3.8em" viewBox="0 0.55 2 3" aria-hidden="true">
-		<path d="m 0 0 l 1 2 c 0.5 1 0.5 1 1 1 l 0 -3 z" />
-	</svg>
-	<ul>
-		<li class="nav-item" class:active={$page.path.endsWith('/')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/">
-				<!-- <i class="ion-gear-a" /> -->
-				<!-- &nbsp;  -->
-				Home
-			</a>
-		</li>
-		<li class="nav-item" class:active={$page.path.endsWith('/about')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/about">
-				<!-- <i class="ion-gear-a" /> -->
-				<!-- &nbsp;  -->
-				About
-			</a>
-		</li>
-		<li class="nav-item" class:active={$page.path.endsWith('/login')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/auth/login">
-				<!-- <i class="ion-gear-a" /> -->
-				<!-- &nbsp;  -->
-				Sign In
-			</a>
-		</li>
-		<li class="nav-item" class:active={$page.path.endsWith('/register')}>
-			<a class="nav-link" sveltekit:prefetch href="{base}/auth/register">
-				<!-- <i class="ion-gear-a" /> -->
-				<!-- &nbsp; -->
-				Sign Up
-			</a>
-		</li>
-	</ul>
-	<svg width="2.3em" height="3.8em" viewBox="0 0.55 2 3" aria-hidden="true">
-		<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-	</svg>
+<nav class="bg-orange-300">
+	<div class="flex justify-between mx-1  lg:mx-50">
+		<Logo />
+		<div class="inline-flex ">
+			<!-- Primary Navbar items -->
+			<div class="flex items-center space-x-3">
+				<div class="hidden md:block">
+					<a
+						class:active={$page.path.endsWith('/')}
+						sveltekit:prefetch
+						href="{base}/"
+						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">Home</a
+					>
+					<a
+						class:active={$page.path.endsWith('/about')}
+						sveltekit:prefetch
+						href="{base}/about"
+						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">About</a
+					>
+					<a
+						class:active={$page.path.endsWith('/contact')}
+						sveltekit:prefetch
+						href="{base}/contact"
+						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">Contact Us</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- Secondary Navbar items -->
+		<div class="hidden md:flex items-center space-x-3">
+			<a
+				class:active={$page.path.endsWith('/login')}
+				sveltekit:prefetch
+				href="{base}/auth/login"
+				class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl">Log In</a
+			>
+			<a
+				class:active={$page.path.endsWith('/register')}
+				sveltekit:prefetch
+				href="{base}/auth/register"
+				class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign Up</a
+			>
+		</div>
+		<div class="self-center text-sm  font-extrabold text-orange-500 md:hidden">
+			Strengthening Our Community
+		</div>
+		<!-- Mobile menu button -->
+		<div class="md:hidden flex items-center">
+			<button class="outline-none mobile-menu-button" on:click={handleNav}>
+				<svg
+					class=" w-6 h-6 text-orange-500 hover:text-green-500 "
+					x-show="!showMenu"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<!-- Mobile menu -->
+	<div class="mobile-menu" class:hidden={menuOpen}>
+		<ul>
+			<li class="py-4">
+				<a
+					on:click={handleNav}
+					class:active={$page.path.endsWith('/')}
+					sveltekit:prefetch
+					href="{base}/"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Home</a
+				>
+			</li>
+			<li class="py-4">
+				<a
+					on:click={handleNav}
+					class:active={$page.path.endsWith('/about')}
+					sveltekit:prefetch
+					href="{base}/about"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">About</a
+				>
+			</li>
+			<li class="py-4">
+				<a
+					on:click={handleNav}
+					class:active={$page.path.endsWith('/contact')}
+					sveltekit:prefetch
+					href="{base}/contact"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Contact Us</a
+				>
+			</li>
+			<li class="py-4">
+				<a
+					on:click={handleNav}
+					class:active={$page.path.endsWith('/login')}
+					sveltekit:prefetch
+					href="{base}/auth/login"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Log In</a
+				>
+			</li>
+			<li class="py-8">
+				<a
+					on:click={handleNav}
+					class:active={$page.path.endsWith('/register')}
+					sveltekit:prefetch
+					href="{base}/auth/register"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign Up</a
+				>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 <style>
-	nav {
-		font-family: 'Segoe UI';
-		display: inline-flex;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	path {
-		fill: var(--background-without-opacity);
-	}
-
-	ul {
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::before {
-		--size: 9px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
-	}
-
-	li.active::after {
-		--size: 9px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		bottom: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-bottom: var(--size) solid var(--accent-color);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 800;
-		font-size: 0.6rem;
-		text-transform: uppercase;
-		letter-spacing: 10%;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--accent-color);
+	a.active {
+		background-color: transparent;
+		color: rgb(249, 115, 22);
 	}
 </style>

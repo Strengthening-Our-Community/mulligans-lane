@@ -1,6 +1,6 @@
 <script>
 	import Header from '$components/header/Header.svelte';
-	import "virtual:windi.css"
+	import 'virtual:windi.css';
 	import '../app.css';
 </script>
 
@@ -19,7 +19,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
+
 		width: 100%;
 		max-width: 1024px;
 		margin: 0 auto;
@@ -33,11 +33,11 @@
 		align-items: center;
 		padding: 10px;
 		background-color: #f46524;
-		color:aliceblue;
+		color: aliceblue;
 	}
 
 	footer p {
-		color:aliceblue;
+		color: aliceblue;
 	}
 
 	@media (min-width: 480px) {

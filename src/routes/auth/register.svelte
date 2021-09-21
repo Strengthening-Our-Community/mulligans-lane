@@ -11,38 +11,14 @@
 	}
 </script>
 
-<script>
-	import { goto } from '$app/navigation';
-	async function signUp(e) {
-		const response = await fetch('/api/auth/register', {
-			method: 'post',
-			body: new FormData(e.target)
-		});
-
-		if (response.ok) {
-			console.log(response);
-			window.location = '/';
-		} else alert(await response.text());
-	}
-	async function signIn(e) {
-		const response = await fetch('/auth/signin', {
-			method: 'post',
-			body: new FormData(e.target)
-		});
-		if (response.ok) window.location = '/';
-		else alert(await response.text());
-	}
-</script>
-
 <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-	<div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-		<!-- <form on:submit|preventDefault={signUp}> -->
+	<div class="bg-white px-6 py-1 rounded shadow-md text-black w-full">
 		<form action="/api/auth/register" method="POST">
-			<h1 class="mb-8 text-3xl text-center">Sign up</h1>
+			<h1 class="mb-1 text-xl text-center">Sign up</h1>
 			<input
 				id="fullname"
 				type="text"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="fullname"
 				required="required"
 				placeholder="Full Name"
@@ -51,7 +27,7 @@
 			<input
 				id="streetaddress"
 				type="text"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="streetaddress"
 				required="required"
 				placeholder="Street Address"
@@ -61,7 +37,7 @@
 				<input
 					id="suburb"
 					type="text"
-					class=" border max-w-1/2 border-orange-700 w-full p-3 rounded mb-4"
+					class=" border max-w-1/2 border-orange-700 w-full p-1 rounded mb-1"
 					name="suburb"
 					required="required"
 					placeholder="Suburb"
@@ -70,7 +46,7 @@
 				<input
 					id="postcode"
 					type="text"
-					class=" border max-w-1/3 border-orange-700 w-full p-3 rounded mb-4"
+					class=" border max-w-1/3 border-orange-700 w-full p-1 rounded mb-1"
 					name="postcode"
 					required="required"
 					placeholder="Postcode"
@@ -80,7 +56,7 @@
 			<input
 				id="mobile"
 				type="tel"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="mobile"
 				required="required"
 				placeholder="Mobile phone number"
@@ -89,7 +65,7 @@
 			<input
 				id="username"
 				type="username"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="username"
 				required="required"
 				placeholder="User Name"
@@ -98,7 +74,7 @@
 			<input
 				id="email"
 				type="email"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="email"
 				required="required"
 				placeholder="Email"
@@ -107,7 +83,7 @@
 			<input
 				id="password"
 				type="password"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="password"
 				required="required"
 				placeholder="Password"
@@ -115,7 +91,7 @@
 			<input
 				id="confirmpassword"
 				type="password"
-				class="block border border-orange-700 w-full p-3 rounded mb-4"
+				class="block border border-orange-700 w-full p-1 rounded mb-1"
 				name="confirmpassword"
 				required="required"
 				placeholder="Confirm Password"
@@ -123,11 +99,11 @@
 
 			<button
 				type="submit"
-				class="w-full text-center py-3 rounded-full bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1"
+				class="w-full text-center py-1 rounded-full bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1"
 				>Create Account</button
 			>
 		</form>
-		<div class="text-center text-sm text-grey-dark mt-4">
+		<div class="text-center text-sm text-grey-dark mt-1">
 			By signing up, you agree to the
 			<a
 				class="no-underline border-b border-grey-dark text-grey-dark"
@@ -142,7 +118,7 @@
 		</div>
 	</div>
 
-	<div class="text-grey-dark mt-6">
+	<div class="text-grey-dark mt-3">
 		Already have an account?
 		<a class="no-underline border-b border-blue text-blue" href="../auth/login/"> Sign in </a>.
 	</div>
