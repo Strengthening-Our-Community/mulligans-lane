@@ -18,7 +18,7 @@ const config = {
 			plugins: [WindiCSS.default()]
 		},
 		paths: {
-			// base: '/mulligans-lane',
+			// base: '/mulligans-lane'
 			// assets: '/mulligans-lane'
 		},
 		adapter: adapter({
