@@ -1,1 +1,0 @@
-import{U as s}from"./vendor-686b029b.js";const I=s("https://dlesnsqsssibdwrcckyc.supabase.co","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyNzE5MzIzOCwiZXhwIjoxOTQyNzY5MjM4fQ.AFibbQXFIrqWux9x1oLm5_pzviAAoO7CSr8gADUdJkI");export{I as s};
