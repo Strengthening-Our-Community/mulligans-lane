@@ -9,21 +9,21 @@
 
 		
 
-		<link rel="modulepreload" href="/mulligans-lane/_app/start-a3719763.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/vendor-1fb4a43c.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/preload-helper-4a6625e9.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/pages/__layout.svelte-3f119300.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/pages/profile/index.svelte-2392cf91.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/db-77ef78d4.js">
-		<link rel="stylesheet" href="/mulligans-lane/_app/assets/start-808c0b29.css">
-		<link rel="stylesheet" href="/mulligans-lane/_app/assets/pages/__layout.svelte-802a0cb7.css">
+		<link rel="modulepreload" href="/_app/start-30bcbe0f.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-1fb4a43c.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-3f119300.js">
+		<link rel="modulepreload" href="/_app/pages/profile/index.svelte-2392cf91.js">
+		<link rel="modulepreload" href="/_app/chunks/db-77ef78d4.js">
+		<link rel="stylesheet" href="/_app/assets/start-808c0b29.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-802a0cb7.css">
 
 		<script type="module">
-			import { start } from "/mulligans-lane/_app/start-a3719763.js";
+			import { start } from "/_app/start-30bcbe0f.js";
 			start({
 				target: document.querySelector("#svelte"),
-				paths: {"base":"/mulligans-lane","assets":""},
+				paths: {"base":"","assets":""},
 				session: {},
 				host: location.host,
 				route: true,
@@ -33,8 +33,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/mulligans-lane/_app/pages/__layout.svelte-3f119300.js"),
-						import("/mulligans-lane/_app/pages/profile/index.svelte-2392cf91.js")
+						import("/_app/pages/__layout.svelte-3f119300.js"),
+						import("/_app/pages/profile/index.svelte-2392cf91.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -50,26 +50,26 @@
 		<div id="svelte">
 
 
-<header><nav class="bg-orange-300"><div class="flex justify-between mx-1 lg:mx-50"><a class="p-1 w-44px md:w-66px md:mx-4rem rounded-full" aria-label="Hall photo" href="https://www.facebook.com/Burrell-Creek-Youth-and-Community-Association-Inc-1584955455117833/?__tn__=-UC*F"><img class="rounded-full" src="/mulligans-lane/_app/assets/hall_logo_image-74e3ea7f.png" alt="BCYCA Inc"></a>
+<header><nav class="bg-orange-300"><div class="flex justify-between mx-1 lg:mx-50"><a class="p-1 w-44px md:w-66px md:mx-4rem rounded-full" aria-label="Hall photo" href="https://www.facebook.com/Burrell-Creek-Youth-and-Community-Association-Inc-1584955455117833/?__tn__=-UC*F"><img class="rounded-full" src="/_app/assets/hall_logo_image-74e3ea7f.png" alt="BCYCA Inc"></a>
 		<div class="inline-flex ">
-			<div class="flex items-center space-x-3"><div class="hidden md:block"><a sveltekit:prefetch href="/mulligans-lane/" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Home</a>
-					<a sveltekit:prefetch href="/mulligans-lane/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">About</a>
-					<a sveltekit:prefetch href="/mulligans-lane/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
+			<div class="flex items-center space-x-3"><div class="hidden md:block"><a sveltekit:prefetch href="/" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Home</a>
+					<a sveltekit:prefetch href="/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">About</a>
+					<a sveltekit:prefetch href="/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
 
 		
-		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/login" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a>
-			<a sveltekit:prefetch href="/mulligans-lane/auth/register" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></div>
+		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/auth/login" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a>
+			<a sveltekit:prefetch href="/auth/register" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></div>
 		<div class="self-center text-sm font-extrabold text-orange-500 md:hidden">Strengthening Our Community
 		</div>
 		
 		<div class="md:hidden flex items-center"><button class="outline-none mobile-menu-button"><svg class="w-6 h-6 text-orange-500 hover:text-green-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div>
 
 	
-	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/login" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a></li>
-			<li class="py-8"><a sveltekit:prefetch href="/mulligans-lane/auth/register" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
+	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/auth/login" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a></li>
+			<li class="py-8"><a sveltekit:prefetch href="/auth/register" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
 </nav></header>
 
 <main class="flex flex-col w-full items-center"><div class="container max-w-2xl mx-auto flex-1 flex flex-col items-center justify-center px-2"><div class="bg-white px-3 py-4 rounded shadow-md text-gray-900 w-full leading-tight "><h1 class="mb-2 text-3xl text-center">Your Profile</h1>
