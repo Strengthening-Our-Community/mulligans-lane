@@ -8,6 +8,9 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		vite: {
+			define: {
+				'process.env': process.env
+			},
 			resolve: {
 				alias: {
 					$components: resolve('./src/components'),

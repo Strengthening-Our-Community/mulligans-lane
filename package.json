@@ -2,7 +2,7 @@
   "name": "mulligans-lane",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "env-cmd svelte-kit dev",
     "build": "rimraf  build && svelte-kit build && touch build/.nojekyll || type NUL > build/.nojekyll",
     "deploy": "npm run build && npx gh-pages -d build -t true",
     "preview": "svelte-kit preview",
@@ -13,7 +13,6 @@
     "@supabase/supabase-js": "^1.20.0",
     "@sveltejs/adapter-static": "^1.0.0-next.13",
     "@sveltejs/kit": "next",
-    "dotenv": "^10.0.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
@@ -28,6 +27,7 @@
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
+    "env-cmd": "^10.1.0",
     "leaflet": "^1.7.1"
   }
 }

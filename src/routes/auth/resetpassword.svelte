@@ -1,7 +1,5 @@
 <script>
 	import supabase from '$lib/db';
-	import dotenv from 'dotenv';
-	dotenv.config();
 
 	export async function surveyResult({ fetch }) {
 		let survey;

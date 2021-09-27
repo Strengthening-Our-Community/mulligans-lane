@@ -1,9 +1,6 @@
-import { createClient } from '@supabase/supabase-js'
-import { variables } from '../variables'
+import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_ANON_KEY, SUPABASE_URL } from '../variables';
 
-const supabase = createClient(
-  variables.supabaseUrl,
-  variables.supabaseAnonKey
-)
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-export default supabase
+export default supabase;
