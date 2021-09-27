@@ -21,8 +21,7 @@ const config = {
 			plugins: [WindiCSS.default()]
 		},
 		paths: {
-			// base: '/mulligans-lane'
-			// assets: '/mulligans-lane'
+			base: process.env.NODE_ENV === 'production' ? '/mulligans-lane' : ''
 		},
 		adapter: adapter({
 			pages: 'build',

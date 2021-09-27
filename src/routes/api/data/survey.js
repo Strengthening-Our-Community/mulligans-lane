@@ -1,8 +1,8 @@
-import { variables } from '../../../variables';
+import { GOOGLE_API_KEY, SHEET_ID } from '../../../variables';
 
 export async function get() {
-	const key = variables.googleApiKey;
-	const id = variables.sheetId;
+	const key = GOOGLE_API_KEY;
+	const id = SHEET_ID;
 	const ranges = 'Data';
 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values&key=${key}`;
 	// const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values:batchGet?${ranges}&key=${key}`;
