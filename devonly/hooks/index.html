@@ -5,14 +5,41 @@
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Contact Us</title>
+		
 
 		
 
 		<link rel="stylesheet" href="/mulligans-lane/_app/assets/start-808c0b29.css">
 		<link rel="stylesheet" href="/mulligans-lane/_app/assets/pages/__layout.svelte-d695ab68.css">
+		<link rel="modulepreload" href="/mulligans-lane/_app/start-c966b82b.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/vendor-151c6116.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/preload-helper-4a6625e9.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/stores-ceeadb0f.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/pages/devonly/hooks.svelte-0d99b1da.js">
 
-		<script>
+		<script type="module">
+			import { start } from "/mulligans-lane/_app/start-c966b82b.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/mulligans-lane","assets":"/mulligans-lane"},
+				session: void 0,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js"),
+						import("/mulligans-lane/_app/pages/devonly/hooks.svelte-0d99b1da.js")
+					],
+					url: new URL("sveltekit://prerender/devonly/hooks"),
+					params: {}
+				}
+			});
+		</script><script>
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('/service-worker.js');
 			}
@@ -26,7 +53,7 @@
 		<div class="inline-flex ">
 			<div class="flex items-center space-x-3"><div class="hidden md:block"><a sveltekit:prefetch href="/mulligans-lane/" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Home</a>
 					<a sveltekit:prefetch href="/mulligans-lane/about" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">About</a>
-					<a sveltekit:prefetch href="/mulligans-lane/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf active">Contact Us</a></div></div></div>
+					<a sveltekit:prefetch href="/mulligans-lane/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
 
 		
 		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a>
@@ -39,21 +66,18 @@
 	
 	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Contact Us</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a></li>
 			<li class="py-8"><a sveltekit:prefetch href="/mulligans-lane/auth/signup" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
 </nav></header>
 
 <main class="flex flex-col w-full items-center">
 
-<div class="content"><h1>We are here</h1>
 
-	<h3>We have a project</h3>
-	<p>Our aim is to <br>
-		Prepare<br>
-		Connect<br>
-		Rebound
-	</p></div></main>
+
+
+
+undefined</main>
 
 <footer class="fixed bottom-0 flex flex-col justify-center items-center p-2 bg-orange-600 text-light-600 w-full"><p>Building a safer connected community</p></footer>
 

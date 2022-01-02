@@ -9,23 +9,22 @@
 
 		
 
-		<link rel="modulepreload" href="/mulligans-lane/_app/start-e0165657.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/vendor-15b3601f.js">
+		<link rel="stylesheet" href="/mulligans-lane/_app/assets/start-808c0b29.css">
+		<link rel="stylesheet" href="/mulligans-lane/_app/assets/pages/__layout.svelte-d695ab68.css">
+		<link rel="modulepreload" href="/mulligans-lane/_app/start-c966b82b.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/vendor-151c6116.js">
 		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/preload-helper-4a6625e9.js">
 		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/pages/__layout.svelte-67cea161.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/pages/auth/register.svelte-da3c390e.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/variables-dcdd2c72.js">
-		<link rel="stylesheet" href="/mulligans-lane/_app/assets/start-808c0b29.css">
-		<link rel="stylesheet" href="/mulligans-lane/_app/assets/pages/__layout.svelte-34303a88.css">
+		<link rel="modulepreload" href="/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/stores-ceeadb0f.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/pages/auth/signup.svelte-b69bdbea.js">
 
 		<script type="module">
-			import { start } from "/mulligans-lane/_app/start-e0165657.js";
+			import { start } from "/mulligans-lane/_app/start-c966b82b.js";
 			start({
 				target: document.querySelector("#svelte"),
-				paths: {"base":"/mulligans-lane","assets":""},
-				session: {},
-				host: location.host,
+				paths: {"base":"/mulligans-lane","assets":"/mulligans-lane"},
+				session: void 0,
 				route: true,
 				spa: false,
 				trailing_slash: "never",
@@ -33,17 +32,17 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/mulligans-lane/_app/pages/__layout.svelte-67cea161.js"),
-						import("/mulligans-lane/_app/pages/auth/register.svelte-da3c390e.js")
+						import("/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js"),
+						import("/mulligans-lane/_app/pages/auth/signup.svelte-b69bdbea.js")
 					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "/auth/register",
-						query: new URLSearchParams(""),
-						params: {}
-					}
+					url: new URL("sveltekit://prerender/auth/signup"),
+					params: {}
 				}
 			});
+		</script><script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js');
+			}
 		</script>
 	</head>
 	<body>
@@ -57,8 +56,8 @@
 					<a sveltekit:prefetch href="/mulligans-lane/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
 
 		
-		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/login" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a>
-			<a sveltekit:prefetch href="/mulligans-lane/auth/register" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Sign Up</a></div>
+		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a>
+			<a sveltekit:prefetch href="/mulligans-lane/auth/signup" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Sign Up</a></div>
 		<div class="self-center text-sm font-extrabold text-orange-500 md:hidden">Strengthening Our Community
 		</div>
 		
@@ -68,11 +67,11 @@
 	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/login" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Log In</a></li>
-			<li class="py-8"><a sveltekit:prefetch href="/mulligans-lane/auth/register" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Sign Up</a></li></ul></div>
+			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a></li>
+			<li class="py-8"><a sveltekit:prefetch href="/mulligans-lane/auth/signup" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
 </nav></header>
 
-<main class="flex flex-col w-full items-center"><div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"><div class="bg-white px-6 py-1 rounded shadow-md text-black w-full"><form action="/api/auth/register" method="POST"><h1 class="mb-1 text-xl text-center">Sign up</h1>
+<main class="flex flex-col w-full items-center"><div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"><div class="bg-white px-6 py-1 rounded shadow-md text-black w-full"><form action="/api/auth/signup" method="post"><h1 class="mb-1 text-xl text-center">Sign up</h1>
 			<input id="fullname" type="text" class="block border border-orange-700 w-full p-1 rounded mb-1" name="fullname" required="required" placeholder="Full Name" autocomplete="name">
 			<input id="streetaddress" type="text" class="block border border-orange-700 w-full p-1 rounded mb-1" name="streetaddress" required="required" placeholder="Street Address" autocomplete="address-line1">
 			<div class="inline-block"><input id="suburb" type="text" class="border max-w-1/2 border-orange-700 w-full p-1 rounded mb-1" name="suburb" required="required" placeholder="Suburb" autocomplete="address-level2">
@@ -93,14 +92,11 @@
 			</a></div></div>
 
 	<div class="text-grey-dark mt-3">Already have an account?
-		<a class="no-underline border-b border-blue text-blue" href="../auth/login/">Sign in </a>.
+		<a class="no-underline border-b border-blue text-blue" href="../auth/signin/">Sign in </a>.
 	</div></div></main>
 
 <footer class="fixed bottom-0 flex flex-col justify-center items-center p-2 bg-orange-600 text-light-600 w-full"><p>Building a safer connected community</p></footer>
 
-
-
-			
-		</div>
+</div>
 	</body>
 </html>
