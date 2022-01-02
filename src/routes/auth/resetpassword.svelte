@@ -1,5 +1,5 @@
 <script>
-	import supabase from '$lib/db';
+	import supabaseConnection from '$lib/db';
 
 	export async function surveyResult({ fetch }) {
 		let survey;

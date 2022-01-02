@@ -17,7 +17,7 @@
 		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/paths-28a87002.js">
 		<link rel="modulepreload" href="/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js">
 		<link rel="modulepreload" href="/mulligans-lane/_app/chunks/stores-ceeadb0f.js">
-		<link rel="modulepreload" href="/mulligans-lane/_app/pages/data/index.svelte-e04c1665.js">
+		<link rel="modulepreload" href="/mulligans-lane/_app/pages/auth/signin.svelte-b4dcfa95.js">
 
 		<script type="module">
 			import { start } from "/mulligans-lane/_app/start-6d42b97e.js";
@@ -33,9 +33,9 @@
 					error: null,
 					nodes: [
 						import("/mulligans-lane/_app/pages/__layout.svelte-d53c5187.js"),
-						import("/mulligans-lane/_app/pages/data/index.svelte-e04c1665.js")
+						import("/mulligans-lane/_app/pages/auth/signin.svelte-b4dcfa95.js")
 					],
-					url: new URL("sveltekit://prerender/data"),
+					url: new URL("sveltekit://prerender/auth/signin"),
 					params: {}
 				}
 			});
@@ -56,7 +56,7 @@
 					<a sveltekit:prefetch href="/mulligans-lane/contact" class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl svelte-1pfohdf">Contact Us</a></div></div></div>
 
 		
-		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a>
+		<div class="hidden md:flex items-center space-x-3"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Sign In</a>
 			<a sveltekit:prefetch href="/mulligans-lane/auth/signup" class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></div>
 		<div class="self-center text-sm font-extrabold text-orange-500 md:hidden">Strengthening Our Community
 		</div>
@@ -67,12 +67,20 @@
 	<div class="mobile-menu hidden"><ul><li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Home</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/about" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">About</a></li>
 			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/contact" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Contact Us</a></li>
-			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign In</a></li>
+			<li class="py-4"><a sveltekit:prefetch href="/mulligans-lane/auth/signin" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf active">Sign In</a></li>
 			<li class="py-8"><a sveltekit:prefetch href="/mulligans-lane/auth/signup" class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl svelte-1pfohdf">Sign Up</a></li></ul></div>
 </nav></header>
 
-<main class="flex flex-col w-full items-center"><div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"><div class="bg-white px-6 py-1 rounded shadow-md text-black w-full">
-		<form action="/api/data/survey" method="GET"><button type="submit" class="w-full text-center py-1 rounded-full bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1">Get Data</button></form></div></div></main>
+<main class="flex flex-col w-full items-center"><div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"><div class="bg-white px-6 py-8 rounded shadow-md text-black w-full"><h1 class="mb-8 text-3xl text-center">Welcome Back</h1>
+		
+		<form action="/api/auth/signin" method="POST"><input id="email" type="email" class="block border border-orange-700 w-full p-3 rounded mb-4" name="email" required="true" placeholder="Email" autocomplete="email">
+			<input id="password" type="password" class="block border border-orange-700 w-full p-3 rounded mb-4" name="password" required="true" placeholder="Password">
+			<div class="flex justify-between mt-4 mb-3"><a href="../auth/resetpassword" class="text-sm text-gray-600 dark:text-gray-400 hover:underline">Forgot Your Password?
+				</a></div>
+			<button type="submit" class="w-full text-center py-3 rounded-full bg-orange-500 text-white hover:bg-orange-700 focus:outline-none my-1">Sign In</button></form></div>
+	<div class="text-grey-dark mt-6">Not registered?
+		<a class="no-underline border-b border-blue text-blue" href="../auth/signup">Create an account
+		</a></div></div></main>
 
 <footer class="fixed bottom-0 flex flex-col justify-center items-center p-2 bg-orange-600 text-light-600 w-full"><p>Building a safer connected community</p></footer>
 

@@ -18,19 +18,19 @@
 			<div class="flex items-center space-x-3">
 				<div class="hidden md:block">
 					<a
-						class:active={$page.path.endsWith('/')}
+						class:active={$page.url.pathname.endsWith('/')}
 						sveltekit:prefetch
 						href="{base}/"
 						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">Home</a
 					>
 					<a
-						class:active={$page.path.endsWith('/about')}
+						class:active={$page.url.pathname.endsWith('/about')}
 						sveltekit:prefetch
 						href="{base}/about"
 						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">About</a
 					>
 					<a
-						class:active={$page.path.endsWith('/contact')}
+						class:active={$page.url.pathname.endsWith('/contact')}
 						sveltekit:prefetch
 						href="{base}/contact"
 						class="py-1 px-2 text-white bg-orange-500 font-semibold rounded-xl">Contact Us</a
@@ -42,15 +42,15 @@
 		<!-- Secondary Navbar items -->
 		<div class="hidden md:flex items-center space-x-3">
 			<a
-				class:active={$page.path.endsWith('/login')}
+				class:active={$page.url.pathname.endsWith('/signin')}
 				sveltekit:prefetch
-				href="{base}/auth/login"
-				class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl">Log In</a
+				href="{base}/auth/signin"
+				class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign In</a
 			>
 			<a
-				class:active={$page.path.endsWith('/register')}
+				class:active={$page.url.pathname.endsWith('/signup')}
 				sveltekit:prefetch
-				href="{base}/auth/register"
+				href="{base}/auth/signup"
 				class="py-0 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign Up</a
 			>
 		</div>
@@ -82,7 +82,7 @@
 			<li class="py-4">
 				<a
 					on:click={handleNav}
-					class:active={$page.path.endsWith('/')}
+					class:active={$page.url.pathname.endsWith('/')}
 					sveltekit:prefetch
 					href="{base}/"
 					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Home</a
@@ -91,7 +91,7 @@
 			<li class="py-4">
 				<a
 					on:click={handleNav}
-					class:active={$page.path.endsWith('/about')}
+					class:active={$page.url.pathname.endsWith('/about')}
 					sveltekit:prefetch
 					href="{base}/about"
 					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">About</a
@@ -100,7 +100,7 @@
 			<li class="py-4">
 				<a
 					on:click={handleNav}
-					class:active={$page.path.endsWith('/contact')}
+					class:active={$page.url.pathname.endsWith('/contact')}
 					sveltekit:prefetch
 					href="{base}/contact"
 					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Contact Us</a
@@ -109,18 +109,18 @@
 			<li class="py-4">
 				<a
 					on:click={handleNav}
-					class:active={$page.path.endsWith('/login')}
+					class:active={$page.url.pathname.endsWith('/signin')}
 					sveltekit:prefetch
-					href="{base}/auth/login"
-					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Log In</a
+					href="{base}/auth/signin"
+					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign In</a
 				>
 			</li>
 			<li class="py-8">
 				<a
 					on:click={handleNav}
-					class:active={$page.path.endsWith('/register')}
+					class:active={$page.url.pathname.endsWith('/register')}
 					sveltekit:prefetch
-					href="{base}/auth/register"
+					href="{base}/auth/signup"
 					class="py-0.5 px-2 font-semibold text-white bg-orange-500 rounded-xl">Sign Up</a
 				>
 			</li>

@@ -1,8 +1,10 @@
 <script>
-	import supabase from '$lib/db';
+	import supabaseConnection from '$lib/dbClient';
+
+	console.log(supabaseConnection);
 
 	async function updateProfile() {
-		const { user, error } = await supabase.auth.signIn({
+		const { user, error } = await supabaseConnection.auth.signIn({
 			email: 'example@email.com',
 			password: 'example-password'
 		});

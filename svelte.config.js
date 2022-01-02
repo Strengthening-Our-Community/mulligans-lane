@@ -18,7 +18,7 @@ const config = {
 					$actions: resolve('./src/actions')
 				}
 			},
-			plugins: [WindiCSS.default()]
+			plugins: [WindiCSS()]
 		},
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/mulligans-lane' : ''
